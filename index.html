@@ -3,43 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Développeuse Web</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Gabriela - Développeuse Web</title>
+    
+    <style>
+        /* Fond blanc et texte centré */
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;  /* Prend toute la hauteur de la fenêtre */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Style pour le titre principal */
+        h1 {
+            font-size: 3em;
+            color: #4c6ef5;
+            margin-bottom: 10px;
+        }
+
+        /* Style pour le sous-titre */
+        h2 {
+            font-size: 1.5em;
+            color: #e06d3b;
+        }
+
+        /* Style des boutons */
+        .cta-btn {
+            padding: 15px 25px;
+            background-color: #ff7f50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background-color: #e06d3b;
+        }
+
+        /* Espacement entre les boutons */
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Section d'introduction -->
-    <header>
-        <div class="container">
-            <h1>Bonjour, je suis <span class="highlight">MARTA </span></h1>
-            <p>Développeuse web passionnée, spécialisée dans le développement frontend et backend.</p>
-            <a href="#projets" class="cta-btn">Voir mes projets</a>
-        </div>
-    </header>
 
-    <!-- Section Projets -->
-    <section id="projets">
-        <div class="container">
-            <h2>Mes Projets</h2>
-            <div class="projet">
-                <h3>Portfolio Personnel</h3>
-                <p>Un portfolio que j'ai créé pour présenter mes compétences et mes projets.</p>
-                <a href="https://github.com/username/portfolio" target="_blank">Voir sur GitHub</a>
-            </div>
-            <div class="projet">
-                <h3>Site e-commerce</h3>
-                <p>Un site de commerce électronique développé avec React et Node.js.</p>
-                <a href="https://github.com/username/ecommerce-site" target="_blank">Voir sur GitHub</a>
-            </div>
-        </div>
-    </section>
+    <h1>Bonjour, je suis Gabriela</h1>
+    <h2>Développeuse Web</h2>
 
-    <!-- Section Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Gabriela - Développeuse Web</p>
-        </div>
-    </footer>
+    <!-- Section des boutons -->
+    <div class="buttons">
+        <a href="#" class="cta-btn">Télécharger mon CV</a>
+        <a href="#apropos" class="cta-btn">À propos de moi</a>
+    </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
