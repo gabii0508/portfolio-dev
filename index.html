@@ -31,13 +31,13 @@
         /* Style pour le sous-titre */
         h2 {
             font-size: 1.5em;
-            color: #e06d3b;
+            color: #0c0401;
         }
 
         /* Style des boutons */
         .cta-btn {
             padding: 15px 25px;
-            background-color: #ff7f50;
+            background-color: #080301;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -48,7 +48,7 @@
         }
 
         .cta-btn:hover {
-            background-color: #e06d3b;
+            background-color: #120702;
         }
 
         /* Espacement entre les boutons */
@@ -58,7 +58,7 @@
             gap: 20px;
         }
 
-        /* Section Présentation cachée au départ */
+        /* Section Présentation */
         .presentation {
             margin-top: 60px;
             padding: 40px;
@@ -66,15 +66,7 @@
             width: 80%;
             max-width: 800px;
             border-radius: 10px;
-            display: none;  /* Cachée par défaut */
             text-align: left;
-            opacity: 0;  /* Invisible au départ */
-            transition: opacity 1s ease-in-out;
-        }
-
-        .presentation.show {
-            display: block;
-            opacity: 1;
         }
 
         .presentation h3 {
@@ -89,8 +81,30 @@
             color: #333;
         }
 
-        /* Section Softskills et Compétences */
-        .skills, .softskills {
+        /* Section Softskills */
+        .softskills {
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .softskills h4 {
+            font-size: 1.5em;
+            color: #4c6ef5;
+            margin-bottom: 10px;
+        }
+
+        .softskills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .softskills li {
+            margin: 10px 0;
+        }
+
+        /* Section Compétences */
+        .skills {
             margin-top: 60px;
             padding: 40px;
             background-color: #f0f0f0;
@@ -100,28 +114,49 @@
             text-align: left;
         }
 
-        /* Titres de section compétences et softskills */
-        .skills h3, .softskills h3 {
+        .skills h3 {
             font-size: 2.5em;
             color: #4c6ef5;
             margin-bottom: 20px;
         }
 
-        /* Liste des compétences */
-        .skills ul, .softskills ul {
+        /* Section des Carrés pour les Compétences */
+        .skills-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .skill-box {
+            background-color: #ffffff;
+            padding: 30px;
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .skill-box h4 {
+            font-size: 1.8em;
+            color: #4c6ef5;
+            margin-bottom: 20px;
+        }
+
+        .skill-box ul {
             list-style-type: none;
             padding: 0;
         }
 
-        .skills li, .softskills li {
-            font-size: 1.2em;
+        .skill-box li {
             margin: 10px 0;
+            font-size: 1.1em;
+            color: #333;
         }
 
-        /* Style des items de compétence */
         .competence-level {
-            color: #e06d3b;
             font-weight: bold;
+            color: #1c0901;
         }
     </style>
 </head>
@@ -136,8 +171,8 @@
         <button class="cta-btn" id="aboutMeBtn">À propos de moi</button>
     </div>
 
-    <!-- Section Présentation cachée au départ -->
-    <div id="presentation" class="presentation">
+    <!-- Section Présentation -->
+    <div class="presentation">
         <h3>Présentation</h3>
         <p>A 26 ans, je suis actuellement en reconversion pour travailler dans le milieu du développement web.</p>
         <p>Suite à un bac +2 développeur web à la Digital School de Brest, j’ai pu acquérir les bases de plusieurs langages web (HTML, CSS, Javascript, PHP), la gestion de bases de données mais aussi l’utilisation de logiciels tels que Illustrator, Blender ou Figma que j’utilise régulièrement pour créer des maquettes interactives.</p>
@@ -147,35 +182,41 @@
 
     <!-- Section Softskills -->
     <div class="softskills">
-        <h3>Mes Softskills</h3>
-        <ul>
-            <li>Créativité</li>
-            <li>Capacité d'adaptation</li>
-            <li>Autonomie</li>
-        </ul>
+        <h4>Mes Softskills</h4>
+       
     </div>
 
     <!-- Section Compétences -->
     <div class="skills">
         <h3>Mes Compétences</h3>
-        <ul>
-            <li><strong>Développement Web:</strong></li>
-            <li>HTML: <span class="competence-level">intermédiaire</span></li>
-            <li>CSS: <span class="competence-level">intermédiaire</span></li>
-            <li>Javascript: <span class="competence-level">Les bases</span></li>
-            <li>WordPress: <span class="competence-level">intermédiaire</span></li>
-            <li>SQL: <span class="competence-level">Les bases</span></li>
-            <li>PHP: <span class="competence-level">Les bases</span></li>
-        </ul>
 
-        <ul>
-            <li><strong>Web-Design:</strong></li>
-            <li>Figma: <span class="competence-level">Avancé</span></li>
-            <li>Illustrator: <span class="competence-level">intermédiaire</span></li>
-            <li>Photoshop: <span class="competence-level">intermédiaire</span></li>
-            <li>Premiere Pro: <span class="competence-level">Les bases</span></li>
-            <li>Blender: <span class="competence-level">Les bases</span></li>
-        </ul>
+        <!-- Carrés des compétences -->
+        <div class="skills-container">
+            <!-- Carré Développement Web -->
+            <div class="skill-box">
+                <h4>Développement Web</h4>
+                <ul>
+                    <li>HTML: <span class="competence-level">intermédiaire</span></li>
+                    <li>CSS: <span class="competence-level">intermédiaire</span></li>
+                    <li>Javascript: <span class="competence-level">Les bases</span></li>
+                    <li>WordPress: <span class="competence-level">intermédiaire</span></li>
+                    <li>SQL: <span class="competence-level">Les bases</span></li>
+                    <li>PHP: <span class="competence-level">Les bases</span></li>
+                </ul>
+            </div>
+
+            <!-- Carré Web-Design -->
+            <div class="skill-box">
+                <h4>Web-Design</h4>
+                <ul>
+                    <li>Figma: <span class="competence-level">Avancé</span></li>
+                    <li>Illustrator: <span class="competence-level">intermédiaire</span></li>
+                    <li>Photoshop: <span class="competence-level">intermédiaire</span></li>
+                    <li>Premiere Pro: <span class="competence-level">Les bases</span></li>
+                    <li>Blender: <span class="competence-level">Les bases</span></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -185,18 +226,13 @@
             event.preventDefault();
 
             // Sélectionne la section "Présentation"
-            const presentationSection = document.getElementById('presentation');
+            const presentationSection = document.querySelector('.presentation');
 
             // Utilise scrollIntoView pour défiler jusqu'à la section "Présentation"
             presentationSection.scrollIntoView({
                 behavior: 'smooth',  // Défilement fluide
                 block: 'start'  // Aligne le haut de la section avec le haut de la fenêtre
             });
-
-            // Afficher la section "Présentation" après un délai pour permettre le scroll
-            setTimeout(function() {
-                presentationSection.classList.add('show');
-            }, 500);  // Le délai de 500ms pour laisser le temps au défilement
         });
     </script>
 
