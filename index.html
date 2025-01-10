@@ -12,12 +12,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100vh;  /* Prend toute la hauteur de la fenêtre */
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            overflow-x: hidden; /* Empêche le débordement horizontal */
         }
 
         /* Style pour le titre principal */
@@ -43,6 +44,7 @@
             font-size: 1.2em;
             margin-top: 20px;
             display: inline-block;
+            cursor: pointer;
         }
 
         .cta-btn:hover {
@@ -55,6 +57,72 @@
             display: flex;
             gap: 20px;
         }
+
+        /* Section Présentation cachée au départ */
+        .presentation {
+            margin-top: 60px;
+            padding: 40px;
+            background-color: #f0f0f0;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            display: none;  /* Cachée par défaut */
+            text-align: left;
+            opacity: 0;  /* Invisible au départ */
+            transition: opacity 1s ease-in-out;
+        }
+
+        .presentation.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .presentation h3 {
+            font-size: 2.5em;
+            color: #4c6ef5;
+            margin-bottom: 20px;
+        }
+
+        .presentation p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Section Softskills et Compétences */
+        .skills, .softskills {
+            margin-top: 60px;
+            padding: 40px;
+            background-color: #f0f0f0;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        /* Titres de section compétences et softskills */
+        .skills h3, .softskills h3 {
+            font-size: 2.5em;
+            color: #4c6ef5;
+            margin-bottom: 20px;
+        }
+
+        /* Liste des compétences */
+        .skills ul, .softskills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills li, .softskills li {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        /* Style des items de compétence */
+        .competence-level {
+            color: #e06d3b;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -64,9 +132,73 @@
 
     <!-- Section des boutons -->
     <div class="buttons">
-        <a href="#" class="cta-btn">Télécharger mon CV</a>
-        <a href="#apropos" class="cta-btn">À propos de moi</a>
+        <button class="cta-btn" id="downloadCV">Télécharger mon CV</button>
+        <button class="cta-btn" id="aboutMeBtn">À propos de moi</button>
     </div>
+
+    <!-- Section Présentation cachée au départ -->
+    <div id="presentation" class="presentation">
+        <h3>Présentation</h3>
+        <p>A 26 ans, je suis actuellement en reconversion pour travailler dans le milieu du développement web.</p>
+        <p>Suite à un bac +2 développeur web à la Digital School de Brest, j’ai pu acquérir les bases de plusieurs langages web (HTML, CSS, Javascript, PHP), la gestion de bases de données mais aussi l’utilisation de logiciels tels que Illustrator, Blender ou Figma que j’utilise régulièrement pour créer des maquettes interactives.</p>
+        <p>J’ai ensuite pu exercer et améliorer ces connaissances avec un stage de 3 mois aux côtés d’un développeur web expérimenté.</p>
+        <p>J’aimerais maintenant continuer ma formation avec une troisième année en bachelor « Développement web » en alternance toujours à la Digital School.</p>
+    </div>
+
+    <!-- Section Softskills -->
+    <div class="softskills">
+        <h3>Mes Softskills</h3>
+        <ul>
+            <li>Créativité</li>
+            <li>Capacité d'adaptation</li>
+            <li>Autonomie</li>
+        </ul>
+    </div>
+
+    <!-- Section Compétences -->
+    <div class="skills">
+        <h3>Mes Compétences</h3>
+        <ul>
+            <li><strong>Développement Web:</strong></li>
+            <li>HTML: <span class="competence-level">intermédiaire</span></li>
+            <li>CSS: <span class="competence-level">intermédiaire</span></li>
+            <li>Javascript: <span class="competence-level">Les bases</span></li>
+            <li>WordPress: <span class="competence-level">intermédiaire</span></li>
+            <li>SQL: <span class="competence-level">Les bases</span></li>
+            <li>PHP: <span class="competence-level">Les bases</span></li>
+        </ul>
+
+        <ul>
+            <li><strong>Web-Design:</strong></li>
+            <li>Figma: <span class="competence-level">Avancé</span></li>
+            <li>Illustrator: <span class="competence-level">intermédiaire</span></li>
+            <li>Photoshop: <span class="competence-level">intermédiaire</span></li>
+            <li>Premiere Pro: <span class="competence-level">Les bases</span></li>
+            <li>Blender: <span class="competence-level">Les bases</span></li>
+        </ul>
+    </div>
+
+    <script>
+        // Lorsque l'utilisateur clique sur le bouton "À propos de moi"
+        document.getElementById('aboutMeBtn').addEventListener('click', function(event) {
+            // Empêche toute redirection ou changement de page
+            event.preventDefault();
+
+            // Sélectionne la section "Présentation"
+            const presentationSection = document.getElementById('presentation');
+
+            // Utilise scrollIntoView pour défiler jusqu'à la section "Présentation"
+            presentationSection.scrollIntoView({
+                behavior: 'smooth',  // Défilement fluide
+                block: 'start'  // Aligne le haut de la section avec le haut de la fenêtre
+            });
+
+            // Afficher la section "Présentation" après un délai pour permettre le scroll
+            setTimeout(function() {
+                presentationSection.classList.add('show');
+            }, 500);  // Le délai de 500ms pour laisser le temps au défilement
+        });
+    </script>
 
 </body>
 </html>
