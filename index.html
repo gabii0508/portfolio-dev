@@ -7,9 +7,8 @@
     
     <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="styles.css">
-    
     <!-- Lien vers Font Awesome pour les icônes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
 
@@ -35,38 +34,62 @@
     <div class="skills">
         <h3>Mes Compétences</h3>
 
-        <!-- Carrés des compétences -->
+        <!-- Compétences en ligne -->
         <div class="skills-container">
-            <!-- Carré Développement Web -->
-            <div class="skill-box">
-                <i class="fas fa-code"></i>
-                <h4>Développement Web</h4>
-                <ul>
-                    <li><i class="fab fa-html5"></i> HTML</li>
-                    <li><i class="fab fa-css3-alt"></i> CSS</li>
-                    <li><i class="fab fa-js-square"></i> Javascript</li>
-                    <li><i class="fab fa-wordpress"></i> WordPress</li>
-                    <li><i class="fas fa-database"></i> SQL</li>
-                    <li><i class="fab fa-php"></i> PHP</li>
-                </ul>
+            <div class="skill">
+                <i class="fab fa-html5"></i>
+                <span>HTML</span>
             </div>
-
+            <div class="skill">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS</span>
+            </div>
+            <div class="skill">
+                <i class="fab fa-js"></i>
+                <span>Javascript</span>
+            </div>
+            <div class="skill">
+                <i class="fab fa-wordpress"></i>
+                <span>WordPress</span>
+            </div>
+            <div class="skill">
+                <i class="fas fa-database"></i>
+                <span>SQL</span>
+            </div>
+            <div class="skill">
+                <i class="fab fa-php"></i>
+                <span>PHP</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Section Parcours -->
     <div class="parcours">
         <h3>Mon Parcours</h3>
         <div class="parcours-container">
-            <div class="parcours-box">
+            <!-- Bac+3 Soins Infirmiers -->
+            <div class="parcours-item">
+                <i class="fas fa-graduation-cap"></i>
                 <h4>Bac+3 Soins Infirmiers</h4>
+                <p>Formation en soins infirmiers, diplôme Bac+3</p>
             </div>
-            <div class="parcours-box">
+            <!-- Employée Infirmière -->
+            <div class="parcours-item">
+                <i class="fas fa-user-md"></i>
                 <h4>Employée Infirmière</h4>
+                <p>6 ans d'expérience en tant qu'infirmière dans divers établissements</p>
             </div>
-            <div class="parcours-box">
+            <!-- Formation WordPress -->
+            <div class="parcours-item">
+                <i class="fab fa-wordpress"></i>
                 <h4>Formation WordPress</h4>
+                <p>Formation avec certification TOSA sur WordPress</p>
             </div>
-            <div class="parcours-box">
+            <!-- Formation Full Stack JavaScript -->
+            <div class="parcours-item">
+                <i class="fab fa-js"></i>
                 <h4>Formation Full Stack JavaScript</h4>
+                <p>Initiation au développement Full Stack JavaScript</p>
             </div>
         </div>
     </div>
@@ -74,15 +97,15 @@
     <!-- Section Contact -->
     <div class="contact">
         <h3>Contactez-moi</h3>
-        <form action="#" method="POST">
-            <label for="name">Nom :</label>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Nom:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Email :</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="message">Message :</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
 
             <button type="submit">Envoyer</button>
         </form>
@@ -91,11 +114,16 @@
     <script>
         // Lorsque l'utilisateur clique sur le bouton "À propos de moi"
         document.getElementById('aboutMeBtn').addEventListener('click', function(event) {
+            // Empêche toute redirection ou changement de page
             event.preventDefault();
+
+            // Sélectionne la section "Présentation"
             const presentationSection = document.querySelector('.presentation');
+
+            // Utilise scrollIntoView pour défiler jusqu'à la section "Présentation"
             presentationSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+                behavior: 'smooth',  // Défilement fluide
+                block: 'start'  // Aligne le haut de la section avec le haut de la fenêtre
             });
         });
     </script>

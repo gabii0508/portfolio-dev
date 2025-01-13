@@ -4,10 +4,10 @@
     --lig: 94%;        /* Luminosité à 94% */
 }
 
-/* Fond blanc et texte centré */
+/* Fond de la page et couleur du texte */
 body {
     background-color: hsl(var(--first-hue), var(--sat), var(--lig)); /* Fond */
-    color: hsl(var(--first-hue), var(--sat), var(--lig)); /* Couleur du texte */
+    color: black; /* Couleur du texte en noir */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -27,45 +27,34 @@ body {
     max-width: 900px;
 }
 
-/* Conteneur pour les carrés de compétences */
+/* Conteneur des compétences en ligne */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly; /* Espacement égal entre les éléments */
+    gap: 20px; /* Espacement entre les éléments */
 }
 
-/* Carré des compétences */
-.skill-box {
+/* Compétence individuelle */
+.skill {
     background-color: #ffffff;
     padding: 20px;
-    width: 45%;
-    margin-bottom: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    width: 150px; /* Largeur des compétences */
+    text-align: center;
 }
 
-.skill-box h4 {
-    font-size: 1.8em;
+.skill i {
+    font-size: 2em; /* Taille des icônes */
     color: #4c6ef5;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Espacement sous l'icône */
 }
 
-.skill-box ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.skill-box li {
-    font-size: 1.1em;
-    margin: 10px 0;
+.skill span {
+    display: block;
+    font-size: 1.2em;
     color: #333;
-}
-
-.skill-box i {
-    margin-right: 10px;
-    color: #4c6ef5;
-    font-size: 1.5em;
 }
 
 /* Section Parcours */
@@ -75,36 +64,46 @@ body {
     max-width: 900px;
 }
 
+/* Conteneur des parcours en ligne */
 .parcours-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly; /* Espacement égal entre les éléments */
+    gap: 20px; /* Espacement entre les éléments */
 }
 
-.parcours-box {
+/* Parcours individuel */
+.parcours-item {
     background-color: #ffffff;
     padding: 20px;
-    width: 45%;
-    margin-bottom: 30px;
+    width: 45%; /* Largeur des éléments de parcours */
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-.parcours-box h4 {
+.parcours-item i {
+    font-size: 2em; /* Taille des icônes */
+    color: #4c6ef5;
+    margin-bottom: 10px; /* Espacement sous l'icône */
+}
+
+.parcours-item h4 {
     font-size: 1.5em;
     color: #4c6ef5;
 }
 
-/* Formulaire de contact */
+.parcours-item p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Formulaire de contact sans bordure */
 .contact {
     margin-top: 60px;
     width: 80%;
     max-width: 900px;
-    background-color: #ffffff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact label {
