@@ -8,7 +8,7 @@
     <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="styles.css">
     <!-- Lien vers Font Awesome pour les icônes -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <!-- Lien vers Google Fonts pour des polices modernes -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -45,11 +45,11 @@
         <div class="skills-container">
             <div class="skill">
                 <i class="fab fa-html5"></i>
-                <span>HTML - Intermédiaire</span>
+                <span>HTML - Avancé</span>
             </div>
             <div class="skill">
                 <i class="fab fa-css3-alt"></i>
-                <span>CSS - Intermédiaire</span>
+                <span>CSS - Avancé</span>
             </div>
             <div class="skill">
                 <i class="fab fa-js"></i>
@@ -57,7 +57,7 @@
             </div>
             <div class="skill">
                 <i class="fab fa-wordpress"></i>
-                <span>WordPress - Intermédiaire</span>
+                <span>WordPress - Avancé</span>
             </div>
             <div class="skill">
                 <i class="fas fa-database"></i>
@@ -65,7 +65,7 @@
             </div>
             <div class="skill">
                 <i class="fab fa-php"></i>
-                <span>PHP - Intermédiaire</span>
+                <span>PHP - Débutant</span>
             </div>
         </div>
     </section>
@@ -73,25 +73,25 @@
     <!-- Section Parcours -->
     <section class="parcours" id="portfolio">
         <h3>Mon Parcours</h3>
-        <div class="parcours-container">
-            <div class="parcours-item">
+        <div class="skills-container">
+            <div class="skill">
                 <i class="fas fa-graduation-cap"></i>
-                <h4>Bac+3 Soins Infirmiers</h4>
+                <span>Bac+3 Soins Infirmiers</span>
                 <p>Formation en soins infirmiers, diplôme Bac+3</p>
             </div>
-            <div class="parcours-item">
+            <div class="skill">
                 <i class="fas fa-user-md"></i>
-                <h4>Employée Infirmière</h4>
+                <span>Employée Infirmière</span>
                 <p>6 ans d'expérience en tant qu'infirmière</p>
             </div>
-            <div class="parcours-item">
+            <div class="skill">
                 <i class="fab fa-wordpress"></i>
-                <h4>Formation WordPress</h4>
+                <span>Formation WordPress</span>
                 <p>Formation avec certification TOSA</p>
             </div>
-            <div class="parcours-item">
+            <div class="skill">
                 <i class="fab fa-js"></i>
-                <h4>Formation Full Stack JavaScript</h4>
+                <span>Formation Full Stack JavaScript</span>
                 <p>Initiation au développement Full Stack</p>
             </div>
         </div>
@@ -119,26 +119,10 @@
         <p>&copy; 2025 Gabriela - Développeuse Web</p>
         <div class="social-links">
             <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="mailto:gaby.g@hotmail.be"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/gabii0508" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:gabygui27@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
-
-    <script>
-        // Animation de défilement au clic sur les boutons
-        document.getElementById('aboutMeBtn').addEventListener('click', function() {
-            document.querySelector('.presentation').scrollIntoView({ behavior: 'smooth' });
-        });
-        document.getElementById('skillsBtn').addEventListener('click', function() {
-            document.querySelector('.skills').scrollIntoView({ behavior: 'smooth' });
-        });
-        document.getElementById('portfolioBtn').addEventListener('click', function() {
-            document.querySelector('.parcours').scrollIntoView({ behavior: 'smooth' });
-        });
-        document.getElementById('contactBtn').addEventListener('click', function() {
-            document.querySelector('.contact').scrollIntoView({ behavior: 'smooth' });
-        });
-    </script>
 
 </body>
 </html>

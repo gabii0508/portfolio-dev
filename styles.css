@@ -1,15 +1,17 @@
 /* Variables */
 :root {
-    --first-hue: 234;
-    --sat: 100%;
-    --lig: 94%;
-    --accent-color: #4c6ef5; /* Couleur accent */
+    --primary-color: #2c3e50; /* Gris foncé élégant pour le texte principal */
+    --accent-color: #34495e; /* Gris-bleu pour les accents */
+    --background-color: #ecf0f1; /* Arrière-plan clair et subtil */
+    --card-background: #ffffff; /* Blanc pur pour les cartes */
+    --hover-color: #95a5a6; /* Gris moyen pour l'effet hover */
+    --input-border: #bdc3c7; /* Bordure claire pour les champs de formulaire */
 }
 
 /* Général */
 body {
-    background-color: hsl(var(--first-hue), var(--sat), var(--lig));
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--primary-color);
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -24,7 +26,7 @@ body {
 nav {
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: var(--card-background);
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -38,14 +40,15 @@ nav ul {
 }
 
 nav li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -60,7 +63,7 @@ header {
 
 h1 {
     font-size: 3em;
-    color: #333;
+    color: var(--primary-color);
 }
 
 h2 {
@@ -76,13 +79,13 @@ h2 {
 }
 
 .presentation h3 {
-    font-size: 2em;
-    color: var(--accent-color);
+    font-size: 2.2em;
+    color: var(--primary-color);
 }
 
 .presentation p {
     font-size: 1.2em;
-    color: #333;
+    color: var(--primary-color);
 }
 
 /* Compétences */
@@ -101,22 +104,28 @@ h2 {
 
 .skill {
     padding: 20px;
-    background-color: #ffffff;
+    background-color: var(--card-background);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 150px;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .skill i {
-    font-size: 2em;
+    font-size: 2.5em;
     color: var(--accent-color);
     margin-bottom: 10px;
 }
 
+.skill span {
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
 .skill:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Parcours */
@@ -134,17 +143,24 @@ h2 {
 }
 
 .parcours-item {
-    background-color: #ffffff;
     padding: 20px;
-    width: 45%;
+    background-color: var(--card-background);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.3s ease;
+}
+
+.parcours-item i {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-bottom: 10px;
 }
 
 .parcours-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Contact */
@@ -153,11 +169,14 @@ h2 {
     width: 80%;
     max-width: 900px;
     padding: 30px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact label {
     font-size: 1.2em;
-    color: #333;
+    color: var(--primary-color);
 }
 
 .contact input,
@@ -165,8 +184,9 @@ h2 {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--input-border);
     border-radius: 5px;
+    font-size: 1em;
 }
 
 .contact button {
@@ -178,16 +198,16 @@ h2 {
     border-radius: 5px;
     font-size: 1.2em;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .contact button:hover {
-    background-color: #3a57d3;
+    background-color: var(--hover-color);
 }
 
 /* Footer */
 footer {
-    background-color: #fff;
+    background-color: var(--card-background);
     padding: 20px;
     width: 100%;
     text-align: center;
@@ -196,7 +216,7 @@ footer {
 
 footer p {
     font-size: 1em;
-    color: #333;
+    color: var(--primary-color);
 }
 
 .social-links {
@@ -208,8 +228,9 @@ footer p {
     color: var(--accent-color);
     margin: 0 15px;
     font-size: 1.5em;
+    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #3a57d3;
+    color: var(--hover-color);
 }
