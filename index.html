@@ -21,6 +21,7 @@
             <li><a href="#about">À propos de moi</a></li>
             <li><a href="#skills">Compétences</a></li>
             <li><a href="#portfolio">Mon Parcours</a></li>
+            <li><a href="#projects">Mes Projets</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="https://formspree.io/f/mbllwnjj" class="cta-btn">Télécharger mon CV</a></li>
         </ul>
@@ -97,6 +98,17 @@
         </div>
     </section>
 
+    <!-- Section Projets -->
+    <section class="projects" id="projects">
+        <h3>Mes Projets</h3>
+        <div class="project-container">
+            <div class="project-card">
+                <h4>Histoire Magique</h4>
+                <p>Un générateur d'histoires magiques pour enfants, créant des récits uniques à partir du lieu, du personnage et de l'objet magique choisis. Sous Javascript.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Section Contact -->
     <section class="contact" id="contact">
         <h3>Contactez-moi</h3>
@@ -123,6 +135,33 @@
             <a href="mailto:gabygui27@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
+
+    <!-- Ajoutez ce style CSS à votre fichier "styles.css" -->
+    <style>
+        .project-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 
 </body>
 </html>
